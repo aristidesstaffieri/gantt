@@ -1,0 +1,147 @@
+
+@import './reset.css';
+
+@import url('https://fonts.googleapis.com/css?family=Lilita+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+// app
+
+// Color Palette
+// Brand Colors
+$dark-purp: #363062;
+$mid-purp: #4d4c7d;
+$light-purp: #827397;
+$pinkish: #d8b9c3;
+
+$bg: #fff;
+
+//Neutrals
+$light-grey: #f7f7f7;
+$dark-grey: #dbdbdb;
+
+// Use 8pt grid system
+$small: 8px;
+$medium: 16px;
+$large: 24px;
+$x-large: 32px;
+
+// Make Font Sizes based on 8pt
+// Line height of 8 and base of font size of 16
+
+// mixins
+
+@mixin button($bg) {
+  background: $bg;
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 1em;
+  border: 0;
+  cursor: pointer;
+
+  &:hover {
+    background: darken($bg, 15%);
+    transition: all 0.3s ease;
+  }
+
+  &:active {
+    background: darken($bg, 25%);
+  }
+}
+
+body {
+  padding: 0;
+  margin: 0;
+
+  font-family: 'Lilita One', cursive;
+  background-color: $bg;
+}
+
+.app {
+  height: auto;
+  width: 100%;
+}
+
+// auth
+
+.authentication {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 100vh;
+  width: 100%;
+
+  .auth_form {
+    height: 400px;
+    width: 50%;
+
+    border: 1px solid;
+  }
+}
+
+// authed app
+
+.app_container {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+
+  header {
+    height: 60px;
+
+    color: $dark_purp;
+
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+
+    padding: 0 10px;
+
+    button {
+      @include button($light-purp);
+
+      height: 75%;
+    }
+  }
+
+  .app_body {
+    height: 100%;
+    display: flex;
+
+    .navigation {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      flex: 1;
+
+      color: $dark_purp;
+
+      .nav_body {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .nav_footer {
+
+      }
+    }
+
+    .body {
+      flex: 4;
+      padding: 10px;
+
+      background-color: $bg;
+
+      border-top-left-radius: 10px;
+    }
+
+  }
+
+
+}

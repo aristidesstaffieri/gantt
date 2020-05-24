@@ -1,0 +1,15 @@
+{
+  "pg": {
+    "user": "gantt",
+    "password": "gantt",
+    "host": "localhost",
+    "port": 5432,
+    "database": "gantt"
+  },
+  "session": {
+    "name": "session",
+    "secret": "superduperlongsecretyayyay",
+    "secure": false,
+    "maxAge": 900000
+  }
+}
