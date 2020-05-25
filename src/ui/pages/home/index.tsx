@@ -2,6 +2,8 @@ import * as React from 'react'
 import { connect } from 'react-redux'
 import { Dispatch, Action } from 'redux'
 
+import { TimeLine } from '../../components/timeline'
+
 import {
   postLogOut
 } from '../../store/actions'
@@ -11,7 +13,7 @@ interface Props {}
 const HomeView: React.FunctionComponent<Props> = (_props) => {
   return (
     <div className='app_container'>
-
+      <TimeLine />
     </div>
   )
 }

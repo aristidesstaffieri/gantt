@@ -1,0 +1,63 @@
+
+
+.timeline {
+  width: 100%;
+  display: flex;
+}
+
+.calendar {
+  width: 100%;
+  height: 600px; // test height
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  padding: $padding-mid;
+
+  .months {
+    height: 100%;
+    display: flex;
+    overflow: scroll;
+    z-index: 9;
+
+    padding: $padding-mid 0;
+
+    .month {
+      display: flex;
+      flex-direction: column;
+
+      .days {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        padding: $padding-mid 0;
+
+        .day {
+          width: 45px;
+          height: 100%;
+          padding: $padding-mid;
+          border-left: 1px dotted $dark-purp;
+        }
+      }
+    }
+  }
+
+  .gantt-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    .test-gantt-slice {
+      height: 25px;
+      border-radius: 5px;
+      background-color: $mid-purp;
+      position: absolute;
+      opacity: 0.75;
+      top: 120px; // test value
+    }
+  }
+
+}

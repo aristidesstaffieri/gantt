@@ -1,5 +1,5 @@
 
-@import './reset.css';
+@import './reset.scss';
 
 @import url('https://fonts.googleapis.com/css?family=Lilita+One&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
@@ -27,6 +27,8 @@ $x-large: 32px;
 
 // Make Font Sizes based on 8pt
 // Line height of 8 and base of font size of 16
+
+$padding-mid: 12px;
 
 // mixins
 
@@ -145,3 +147,8 @@ body {
 
 
 }
+
+
+// imports
+
+@import '../components/timeline/timeline'
